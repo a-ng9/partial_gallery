@@ -11,6 +11,7 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   int _selectedIndex = 0;
+
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
@@ -29,7 +30,7 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color.fromRGBO(249, 70, 100, 1),
-        // title: Text("Main Menu"),
+        title: Text("Partial"),
         actions: <Widget>[
           IconButton(
               icon: Icon(
@@ -41,10 +42,9 @@ class _MainScreenState extends State<MainScreen> {
               })
         ],
       ),
-      backgroundColor: Colors.grey,
-
-      body: Container(child: listScreens[_selectedIndex]),
-      // backgroundColor: Color.fromRGBO(238, 230, 248, 1),
+      body: Container(
+        child: listScreens[_selectedIndex],
+      ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -52,15 +52,17 @@ class _MainScreenState extends State<MainScreen> {
             title: Text('Browse'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.assignment),
+            icon: Icon(Icons.photo),
             title: Text('Inspirations'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.calendar_today),
+            activeIcon: Icon(Icons.favorite),
+            icon: Icon(Icons.favorite_border),
             title: Text('My Collection'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.calendar_today),
+            activeIcon: Icon(Icons.person),
+            icon: Icon(Icons.person_outline),
             title: Text('Account'),
           ),
         ],
@@ -68,6 +70,7 @@ class _MainScreenState extends State<MainScreen> {
         selectedItemColor: Color.fromRGBO(249, 70, 100, 1),
         unselectedItemColor: Colors.black,
         onTap: _onItemTapped,
+        showUnselectedLabels: true,
       ),
     );
   }

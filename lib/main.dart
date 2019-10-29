@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:partial_gallery/mainScreen.dart';
+import 'package:partial_gallery/utils/styles.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Partial Gallery',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Styles.getPinkMaterialColor,
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -40,9 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
         key: formKey,
         child: Center(
           child: Container(
-            // color: Colors.grey,
             width: MediaQuery.of(context).size.width * 0.75,
-            // height: MediaQuery.of(context).size.height,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
@@ -55,13 +54,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 TextFormField(
                   decoration: InputDecoration(labelText: "Your email"),
-                  validator: nameValidator,
+                  // validator: nameValidator,
                   // onSaved: (String value) => _id = value
                 ),
                 TextFormField(
                   decoration: InputDecoration(labelText: "Password"),
                   // onSaved: (String value) => _userId = value,
-                  validator: nameValidator,
+                  // validator: nameValidator,
                 ),
                 SizedBox(
                   height: 50,
