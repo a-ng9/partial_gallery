@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:partial_gallery/screens/myReviews.dart';
 
 class MyReviews extends StatelessWidget {
   @override
