@@ -18,17 +18,15 @@ class BrowseScreen extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(10),
               height: 200,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: <Widget>[
-                  Container(width: 160, color: Colors.blueGrey),
-                  Container(width: 160, color: Colors.brown),
-                  Container(width: 160, color: Colors.blue),
-                  Container(width: 160, color: Colors.red),
-                  Container(width: 160, color: Colors.yellow),
-                  Container(width: 160, color: Colors.green)
-                ],
-              ),
+              child:
+                  ListView(scrollDirection: Axis.horizontal, children: <Widget>[
+                Container(width: 160, color: Colors.blueGrey),
+                Container(width: 160, color: Colors.brown),
+                Container(width: 160, color: Colors.blue),
+                Container(width: 160, color: Colors.red),
+                Container(width: 160, color: Colors.yellow),
+                Container(width: 160, color: Colors.green)
+              ]),
             ),
             //Line in the middle (line that seperates the perso and the new pieces)
             Container(
@@ -43,15 +41,13 @@ class BrowseScreen extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(left: 10.0, right: 10),
-              child: Column(
-                children: <Widget>[
-                  Container(height: 160, color: Colors.red),
-                  Container(height: 160, color: Colors.orange),
-                  Container(height: 160, color: Colors.yellow),
-                  Container(height: 160, color: Colors.green),
-                  Container(height: 160, color: Colors.teal),
-                ],
-              ),
+              child: Column(children: <Widget>[
+                Container(height: 160, color: Colors.red),
+                Container(height: 160, color: Colors.orange),
+                Container(height: 160, color: Colors.yellow),
+                Container(height: 160, color: Colors.green),
+                Container(height: 160, color: Colors.teal),
+              ]),
             )
           ],
         ),
