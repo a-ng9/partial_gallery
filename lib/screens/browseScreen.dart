@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:partial_gallery/utils/styles.dart';
+import 'package:partial_gallery/widgets/bottom_sheet.dart';
+import 'package:partial_gallery/widgets/search_chip.dart';
 
 class BrowseScreen extends StatelessWidget {
   @override
@@ -9,26 +11,10 @@ class BrowseScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            //first title
-            Padding(
-              padding: const EdgeInsets.only(top: 10.0, left: 10),
-              child: Text("Personalised Recommendations:"),
-            ),
-            //Horizontal scroll
-            Container(
-              padding: const EdgeInsets.all(10),
-              height: 200,
-              child:
-                  ListView(scrollDirection: Axis.horizontal, children: <Widget>[
-                Container(width: 160, color: Colors.blueGrey),
-                Container(width: 160, color: Colors.brown),
-                Container(width: 160, color: Colors.blue),
-                Container(width: 160, color: Colors.red),
-                Container(width: 160, color: Colors.yellow),
-                Container(width: 160, color: Colors.green)
-              ]),
-            ),
-            //Line in the middle (line that seperates the perso and the new pieces)
+            ////"ChipFilters" is made into a different class to make this dart file more organised
+            ChipFilters(),
+
+            ///Pink line in the middle (line that seperates the perso and the new pieces)
             Container(
               color: Styles.getPinkMaterialColor,
               height: 1,

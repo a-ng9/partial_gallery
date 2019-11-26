@@ -8,11 +8,30 @@ class InspirationScreen extends StatelessWidget {
       backgroundColor: Colors.orange,
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          // mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
-              child: Text("This is the Inspiration Screen"),
+              color: Colors.white,
+              width: double.infinity,
+              height: 50,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  ActionChip(
+                    padding: const EdgeInsets.only(left: 8, right: 8),
+                    label: Text("Price Range"),
+                    onPressed: () {
+                      print("Price Range chip pressed");
+                    },
+                  ),
+                  Chip(
+                    label: Text("Category"),
+                  )
+                ],
+              ),
             ),
+            SizedBox(height: 10),
+            Text("This is the Inspiration Screen"),
             RaisedButton(
               child: Text("My Reviews"),
               onPressed: () {
