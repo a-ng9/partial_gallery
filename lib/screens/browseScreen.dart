@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:partial_gallery/utils/styles.dart';
-import 'package:partial_gallery/widgets/bottom_sheet.dart';
-import 'package:partial_gallery/widgets/search_chip.dart';
+import 'package:partial_gallery/widgets/filter_search.dart';
+// import 'package:partial_gallery/widgets/search_chip.dart';
 
 class BrowseScreen extends StatelessWidget {
   @override

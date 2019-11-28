@@ -5,8 +5,6 @@ import 'package:partial_gallery/utils/styles.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -34,9 +32,6 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text(widget.title),
-      // ),
       body: Form(
         key: formKey,
         child: Center(
@@ -48,6 +43,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 CircleAvatar(
                   backgroundColor: Color.fromRGBO(249, 70, 100, 1),
                   radius: 90,
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 45, right: 50),
+                    child: Text(
+                      "P",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 130,
+                      ),
+                    ),
+                  ),
                 ),
                 SizedBox(
                   height: 100,
