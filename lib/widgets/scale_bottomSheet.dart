@@ -16,9 +16,16 @@ class _ScaleBottomSheetSwitchState extends State<ScaleBottomSheetSwitch> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          Text(
-            "Scale",
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+          Container(
+            padding: const EdgeInsets.only(left: 10),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              "Scale",
+              style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.w500,
+                  decoration: TextDecoration.underline),
+            ),
           ),
           Column(
             children: <Widget>[
@@ -79,7 +86,8 @@ class _ScaleBottomSheetSwitchState extends State<ScaleBottomSheetSwitch> {
               Navigator.pop(context);
               print("Apply Button has been pressed");
             },
-          )
+          ),
+          SizedBox(height: 10)
         ],
       ),
     );

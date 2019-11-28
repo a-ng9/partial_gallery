@@ -23,13 +23,23 @@ class _ChipFiltersState extends State<ChipFilters> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(top: 10, bottom: 10),
-      height: 50,
+      height: 45,
       child: ListView(scrollDirection: Axis.horizontal, children: <Widget>[
         SizedBox(width: 10),
         ActionChip(
           label: Icon(Icons.swap_horiz),
-          onPressed: () {},
+          onPressed: () {
+            showModalBottomSheet(
+                context: context,
+                builder: (BuildContext bc) {
+                  return Column(
+                    children: <Widget>[
+                      ScaleBottomSheetSwitch(),
+                      PriceBottomSheetSwitch(),
+                    ],
+                  );
+                });
+          },
         ),
         SizedBox(width: 10),
         // ChipS("Pricing", () {
@@ -65,16 +75,9 @@ class _ChipFiltersState extends State<ChipFilters> {
         ),
         SizedBox(width: 10),
         ActionChip(
-          // backgroundColor: _chipColorChange,
           label: Text("Color"),
           avatar: Icon(Icons.keyboard_arrow_down),
-          onPressed: () {
-            // showModalBottomSheet(
-            //     context: context,
-            //     builder: (BuildContext bc) {
-            //       return PriceBottomSheetSwitch();
-            //     });
-          },
+          onPressed: () {},
         ),
         SizedBox(
           width: 10,

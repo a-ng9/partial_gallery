@@ -18,9 +18,16 @@ class _PriceBottomSheetSwitch extends State<PriceBottomSheetSwitch> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          Text(
-            "Price Range",
-            style: TextStyle(fontWeight: FontWeight.w500, fontSize: 20),
+          Container(
+            padding: const EdgeInsets.only(left: 10),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              "Price Range",
+              style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.w500,
+                  decoration: TextDecoration.underline),
+            ),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -100,7 +107,8 @@ class _PriceBottomSheetSwitch extends State<PriceBottomSheetSwitch> {
             onPressed: () {
               Navigator.pop(context);
             },
-          )
+          ),
+          SizedBox(height: 10)
         ],
       ),
     );
