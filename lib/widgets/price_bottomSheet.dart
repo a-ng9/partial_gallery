@@ -108,7 +108,6 @@ class _PriceBottomSheetSwitch extends State<PriceBottomSheetSwitch> {
               Navigator.pop(context);
             },
           ),
-          SizedBox(height: 10)
         ],
       ),
     );

@@ -32,11 +32,22 @@ class _ChipFiltersState extends State<ChipFilters> {
             showModalBottomSheet(
                 context: context,
                 builder: (BuildContext bc) {
-                  return Column(
-                    children: <Widget>[
-                      ScaleBottomSheetSwitch(),
-                      PriceBottomSheetSwitch(),
-                    ],
+                  return SingleChildScrollView(
+                    child: Column(
+                      children: <Widget>[
+                        SizedBox(height: 10),
+                        Center(
+                            child: Container(
+                                child: Text('Filter',
+                                    style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w900,
+                                        decoration:
+                                            TextDecoration.underline)))),
+                        ScaleBottomSheetSwitch(),
+                        PriceBottomSheetSwitch(),
+                      ],
+                    ),
                   );
                 });
           },
